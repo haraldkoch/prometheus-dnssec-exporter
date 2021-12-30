@@ -26,7 +26,6 @@ jobs:
           # list of Docker images to use as base name for tags
           # ghcr.io/username/app
           images: |
-            haraldkoch/prometheus-dnssec-exporter
             ghcr.io/${{ github.repository }}
           # generate Docker tags based on the following events/attributes
           tags: |
