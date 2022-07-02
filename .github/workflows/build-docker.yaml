@@ -21,7 +21,7 @@ jobs:
       # https://github.com/docker/build-push-action/blob/master/docs/advanced/tags-labels.md
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           # list of Docker images to use as base name for tags
           # ghcr.io/username/app
