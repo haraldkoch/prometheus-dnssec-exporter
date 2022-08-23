@@ -27,9 +27,6 @@ RUN \
 
 FROM quay.io/prometheus/busybox:glibc
 
-ARG BUILD_DATE
-ARG VCS_REF
-
 COPY --from=builder /go/bin/prometheus-dnssec-exporter /bin/prometheus-dnssec-exporter
 COPY config.sample /etc/dnssec-checks
 
@@ -37,9 +34,8 @@ EXPOSE      9204
 USER        nobody
 ENTRYPOINT  [ "/bin/prometheus-dnssec-exporter" ]
 
+ARG IMAGE_SOURCE
 LABEL maintainer="Harald Koch <harald.koch@gmail.com>" \
-      org.opencontainers.image.created=${BUILD_DATE} \
-      org.opencontainers.image.revision=${VCS_REF} \
-      org.opencontainers.image.source="https://github.com/haraldkoch/prometheus-dnssec-exporter" \
+      org.opencontainers.image.source=${IMAGE_SOURCE} \
       org.opencontainers.image.title="prometheus-dnssec-exporter" \
       org.opencontainers.image.version="${VERSION}"
