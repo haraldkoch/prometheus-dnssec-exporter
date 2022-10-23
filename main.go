@@ -191,6 +191,16 @@ func (e *Exporter) resolve(zone, record, recordType, resolver string) (resolves 
 		return
 	}
 
+        if ! response.AuthenticatedData {
+		e.logger.Printf("while resolving for %v: response not authenticated: %v", hostname(zone, record), response)
+        }
+        if response.CheckingDisabled {
+		e.logger.Printf("while resolving for %v: checking disabled ", hostname(zone, record))
+        }
+        if response.Rcode != dns.RcodeSuccess {
+		e.logger.Printf("while resolving for %v: response code %v", hostname(zone, record), response.Rcode)
+        }
+
 	return response.AuthenticatedData &&
 		!response.CheckingDisabled &&
 		response.Rcode == dns.RcodeSuccess
