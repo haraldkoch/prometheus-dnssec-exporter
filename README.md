@@ -4,7 +4,7 @@ Check for validity and expiration in DNSSEC signatures and expose metrics for Pr
 
 ## Installation
 
-    $ go get -u github.com/chrj/prometheus-dnssec-exporter
+    $ go get -u github.com/haraldkoch/prometheus-dnssec-exporter
 
 ## Usage
 

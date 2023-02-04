@@ -1,4 +1,4 @@
-module github.com/chrj/prometheus-dnssec-exporter
+module github.com/haraldkoch/prometheus-dnssec-exporter
 
 go 1.18
 
