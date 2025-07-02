@@ -1,5 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  extends: ["github>haraldkoch/renovate-config"],
+  "extends": ["github>haraldkoch/renovate-config"],
   "forkProcessing": "enabled"
 }
