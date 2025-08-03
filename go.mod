@@ -5,7 +5,7 @@ go 1.23.0
 toolchain go1.24.5
 
 require (
-	github.com/miekg/dns v1.1.67
+	github.com/miekg/dns v1.1.68
 	github.com/naoina/toml v0.1.1
 	github.com/prometheus/client_golang v1.23.0
 )
