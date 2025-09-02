@@ -16,7 +16,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create a GitHub release
-        uses: ncipollo/release-action@1c89adf39833729d8f85a31ccbc451b078733c80 # v1
+        uses: ncipollo/release-action@98d25d4189e9b6cee19b8635b1ea5cc39c158a41 # v1
         with:
           tag: ${{ steps.tag_version.outputs.new_tag }}
           name: Release ${{ steps.tag_version.outputs.new_tag }}
