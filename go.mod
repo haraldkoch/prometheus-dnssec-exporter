@@ -2,7 +2,7 @@ module github.com/haraldkoch/prometheus-dnssec-exporter
 
 go 1.25.0
 
-toolchain go1.26.6
+toolchain go1.26.7
 
 require (
 	github.com/miekg/dns v1.1.73
